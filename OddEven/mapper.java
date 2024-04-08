@@ -14,6 +14,7 @@ public class mapper extends MapReduceBase implements Mapper<LongWritable, Text, 
       }
       else {
         output.collect(new Text("odd"), new IntWritable(no));
+      }
     }
-  }
+  } 
 }
