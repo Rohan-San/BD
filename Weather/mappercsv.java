@@ -14,7 +14,6 @@ public class mapper extends MapReduceBase implements Mapper<LongWritable, Text, 
                                 Double temp = Double.parseDouble(parts[3].trim());
                                 output.collect(new Text(year), new DoubleWritable(temp));
                         } catch (NumberFormatException e) {
-                                output.collect(new Text("Error"));
                         }
                 }
         }       
