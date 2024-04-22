@@ -2,7 +2,7 @@ package sales;
 import java.io.*;
 import java.util.*;
 import org.apache.hadoop.mapred.*;
-import prg.apache.hadoop.io.*;
+import org.apache.hadoop.io.*;
 
 public class reducer extends MapReduceBase implements Reducer<Text, IntWri
 table, Text, IntWritable> {
