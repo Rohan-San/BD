@@ -8,5 +8,7 @@ sc =SparkContext()
 f = sc.textFile(sys.argv[1])
 
 temp=f.map(lambda x: (x.split('\t')[3],float(x.split('\t')[8])))
+
 total=temp.reduceByKey(lambda a,b : a+b)
+
 total.saveAsTextFile(sys.argv[2])
